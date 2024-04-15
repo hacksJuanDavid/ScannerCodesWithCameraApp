@@ -1,5 +1,6 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { scanOutline } from 'ionicons/icons';
+import ScannerCodes from '../components/ScannerCodes';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -7,16 +8,19 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>
+             Scann Codes 
+            <IonIcon icon={scanOutline} color='primary'/>
+          </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+            <IonTitle size="large">Scann Codes</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <ScannerCodes />
       </IonContent>
     </IonPage>
   );
